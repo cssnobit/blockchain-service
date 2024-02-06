@@ -1,0 +1,407 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'Brush King';
+    src: url('../fonts/BrushKing.otf') format('opentype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+:root {
+    --preto1: #0f0f0f;
+    --preto2: #0a0a0a;
+
+    --laranja1: #9E3F0B;
+    --laranja2: #ea5c10;
+
+    --branco1: #eeeeee;
+    --branco2: #c9c9c9;
+
+    /* FONTES */
+    --fonte-padrao: 'Loto', Arial, sans-serif;
+    --fonte-custom: 'Brush King', 'Loto', Arial, sans-serif;
+}
+
+body {
+    background-color: var(--preto2);
+    color: var(--branco1);
+    font-family: var(--fonte-padrao);
+    height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: var(--preto1);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--laranja2);
+    border-radius: 20px;
+    border: 3px solid var(--preto2);
+  }
+
+.base {
+    max-width: 1204px;
+    margin: 0 auto;
+}
+
+.flex-base {
+    display: flex;
+}
+
+.logo {
+    height: 42px;
+}
+
+.barra::after{
+    content: " ";
+    display: block;
+
+    width: 134px;
+    height: 6px;
+
+    border-radius: 16px;
+    margin: auto auto 10px;
+    background-color: var(--laranja2);
+}
+
+.verticalbar::before{
+    content: " ";
+    display: inline-block;
+    width: 6px;
+    height: 35px;
+    margin-right: 20px;
+    border-radius: 16px;
+    background-color: var(--laranja2);
+}
+
+h2.title {
+    font-size: 53px;
+    color: var(--branco2);
+}
+
+span.orange-mark {
+    color: var(--laranja2);
+    font-size: 1.2em;
+}
+
+h3.title-complemento {
+    font-size: 24px;
+    max-width: 620px;
+}
+
+i.black {
+    color: var(--preto1);
+    text-shadow: 0px 0px 7px var(--preto1);
+}
+
+i.painted {
+    color: var(--laranja2);
+    text-shadow: 0px 0px 7px var(--laranja1);
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--branco1);
+
+    border-radius: 15px;
+    background-color: transparent;
+    border: 4px solid var(--laranja1);
+    transition: all 0.1s;
+}
+.btn:hover {
+    transform: scale(0.97);
+}
+.btn:active {
+    background-color: var(--laranja1);
+    transform: scale(0.94);
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: var(--preto1);
+}
+
+header a {
+    margin: auto;
+}
+
+/* HOME */
+section.home {
+    padding: 80px 4% 180px;
+}
+
+section.home .flex-base {
+    gap: 100px;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+section.home h1 {
+    color: var(--branco2);
+    font-size: 3.4em;
+}
+
+section.home h1 span {
+    color: var(--laranja2);
+    
+}
+
+section.home p {
+    margin-top: 50px;
+    max-width: 499px;
+    font-size: 21px;
+}
+
+/* BLOCKCHAIN ABOUT */
+section.blockchain-about {
+    background-color: var(--laranja2);
+    background-image: linear-gradient(45deg, transparent 20%, var(--laranja1) 25%, transparent 25%),
+    radial-gradient(#0f0f0f50 2px, transparent 0);
+
+    background-size: 30px 30px, 30px 30px;
+    padding: 80px 4%;
+}
+
+section.blockchain-about h2 {
+    margin-bottom: 110px;
+    color: var(--branco2);
+}
+
+section.blockchain-about h2.verticalbar::before {
+    background-color: var(--branco2);
+}
+
+section.blockchain-about .flex-base {
+    align-items: center;
+    justify-content: space-around;
+    gap: 130px;
+}
+
+section.blockchain-about p {
+    font-size: 20px;
+    color: var(--preto2);
+    font-weight: 600;
+    text-indent: 90px;
+    text-align: right;
+    max-width: 700px;
+}
+
+section.blockchain-about i {
+    font-size: 180px;
+}
+
+/* ADVANTAGE */
+section.advantage {
+    padding: 120px 4% 90px;
+}
+
+section.advantage h2 {
+    margin-bottom: 30px;
+}
+
+section.advantage h3 {
+    margin-bottom: 20px;
+}
+
+section.advantage .flex-base {
+    margin-top: 130px;
+    gap: 231px;
+    align-items: center;
+}
+
+section.advantage dl dt {
+    font-family: var(--fonte-custom);
+    color: var(--laranja2);
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+section.advantage dl dt i {
+    font-weight: bolder;
+}
+
+section.advantage dl dd {
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+section.advantage dl dd::first-letter {
+    font-size: 23px;
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating {
+    0% { transform: translate(0, 0px); }
+    50% { transform: translate(0, 15px); }
+    100% { transform: translate(0, -0px); }
+}
+
+/* FORMS SECTION */
+section.form {
+    padding: 70px 4% 180px;
+}
+
+section.form h2 {
+    margin-bottom: 20px;
+}
+
+section.form h3 {
+    margin-bottom: 50px;
+}
+
+section.form .form-container {
+    padding: 40px 80px;
+    max-width: 850px;
+    margin: auto;
+    justify-content: center;
+    background-color: var(--preto1);
+    border-radius: 30px;
+}
+
+section.form .flex-base form {
+    margin: auto;
+    flex-direction: column;
+    width: 80%;
+}
+
+section.form form label {
+    font-weight: 700;
+    margin-bottom: 4px;
+    font-size: 17px;
+}
+
+section.form form input, textarea {
+    padding: 13px;
+    margin-bottom: 21px;
+    outline: none;
+
+    transition: all 0.43s;
+}
+
+section.form form input:focus {
+    border-radius: 13px;
+}
+
+section.form form textarea:focus {
+    border-radius: 13px;
+}
+
+section.form form button {
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 21px;
+    background-color: var(--preto1);
+}
+
+footer .flex-base {
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .flex-base .right-content {
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .right-content p, p > a {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+footer .right-content p > a {
+    color: var(--laranja1);
+}
+
+footer a:hover {
+    filter: saturate(30%);
+}
+
+/* SUCCESS HTML */
+section.success-sec {
+    padding: 80px 4% 150px;
+    background-color: var(--preto2);
+}
+
+section.success-sec .flex-base {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    gap: 10px;
+}
+
+section.success-sec h1, section.success-sec h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+section.success-sec a.btn {
+    margin-top: 50px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1223px) {
+    body {
+        text-align: center;
+    }
+
+    .flex-base {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    section.home {
+        font-size: 0.85em;
+    }
+
+    section.home .right-content, section.blockchain-about i, section.advantage .left-content {
+        display: none;
+    }
+
+    section.blockchain-about p {
+        font-size: 1.3em;
+    }
+
+    section.form .form-container {
+        padding: 40px 0;
+    }
+
+    footer .flex-base {
+        gap: 20px;
+    }
+}
